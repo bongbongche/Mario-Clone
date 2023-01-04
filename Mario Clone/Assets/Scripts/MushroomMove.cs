@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class MushroomMove : MonoBehaviour
 {
     public float enemySpeed = 1.0f;
     public Vector2 direction = new Vector2(-1, 0);
@@ -21,7 +21,15 @@ public class EnemyMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // 충돌하면 방향 바꿔서 전진
-        direction =  (-1) * direction;
+        if(collision.gameObject.tag == "Player_Mini" || collision.gameObject.tag == "Player_Big")
+        {
+            Destroy(gameObject);
+        }
+
+        if(collision.gameObject.tag == "Wall")
+        {
+            // 충돌하면 방향 바꿔서 전진
+            direction = (-1) * direction;
+        }
     }
 }

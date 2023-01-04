@@ -7,6 +7,16 @@ TagManager:
   - Player Foot
   - Enemy
   - Player Body
+  - Player_Mini
+  - Player_Big
+  - Mushroom
+  - Player_Fire
+  - Fire Flower
+  - Normal Block
+  - Hard Block
+  - Mystery Block
+  - Coin
+  - Wall
   layers:
   - Default
   - TransparentFX
